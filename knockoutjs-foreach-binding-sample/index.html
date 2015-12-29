@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="knockout-3.2.0.js"></script>
+		<style type="text/css">
+		ul li
+		{
+		display: inline-block;
+		list-style-type: none;
+		padding-right: 20px;
+		}
+		</style>
+	</head>	
+	<body data-bind="click:change" style="background-color:gray">
+		<h3>Observable images sample</h3>
+		<ul data-bind="foreach:images().imageList"><li>O</li></ul>
+		<ul data-bind="foreach:images().load([{url:'http://cache2.asset-cache.net/xt/457977149.jpg?v=1&g=fs1|0|MIR|77|149&s=1'},{url:'http://cache1.asset-cache.net/xt/137902013.jpg?v=1&g=fs1|0|FKF|02|013&s=1'},{url:'http://cache3.asset-cache.net/xt/153348703.jpg?v=1&g=fs1|0|PHA|48|703&s=1'}])">
+			<li>
+				<h5 data-bind="text:$index"></h5>
+				<img src="" data-bind="attr:{'src':$data.url}">
+			</li>
+		</ul>
+	</body>
+	<script src="scripts.js"></script>
+</html>
