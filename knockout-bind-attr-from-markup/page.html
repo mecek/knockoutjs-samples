@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="knockout-3.2.0.js"></script>
+		<style type="text/css">
+		div
+		{
+		display: inline-block;
+		border: 1px solid black;
+		}
+		</style>
+	</head>	
+	<body style="background-color:gray">
+		<h3>Initialize from markup</h3>
+		<input type="text" data-bind="value: myData">
+		<div data-my="loremipsum" data-bind="markupAttr:{ 'data-my':'myData'}">
+			a div having data-my attribute
+		</div>
+	</body>
+	<script src="scripts.js"></script>
+</html>
